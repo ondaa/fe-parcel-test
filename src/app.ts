@@ -1,11 +1,8 @@
-import { list, getList } from "./js/state";
+import createElement from "./lib/createElement";
 
-import * as classes from "./style/global.module.scss";
+const div = createElement("div");
 
-console.log(classes);
+div.text("qwelkqwel;kqw;ekl;");
+div.className.set(["body", false || "ok", null]);
 
-list.push("asdasd");
-
-setTimeout(function () {
-  console.log(getList());
-}, 1000);
+document.body.appendChild(div.get());
